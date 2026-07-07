@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",          // a qué versión de JS se traduce. ES2022 es seguro en Node moderno
+    "module": "NodeNext",        // sistema de módulos. NodeNext = el que usa Node (require/import) bien resuelto
+    "moduleResolution": "NodeNext",
+    "outDir": "./dist",          // carpeta donde caen los .js compilados
+    "rootDir": "./src",          // carpeta donde están tus .ts. Define la estructura de dist/
+    "strict": true,              // EL MÁS IMPORTANTE. Activa todas las comprobaciones estrictas
+    "esModuleInterop": true,     // permite `import express from 'express'` con librerías CommonJS
+    "skipLibCheck": true,        // no revisa los .d.ts de node_modules (compila más rápido)
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*"],       // qué archivos compilar
+  "exclude": ["node_modules", "dist"]
+}
